@@ -5,17 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-image: url('/Medlit/pic2.png'); /* Replace 'your-image.jpg' with the path to your image file */
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        height: 100vh; /* Ensure the body covers the entire viewport height */
+        overflow: hidden; /* Prevent scrolling */
+      }
+  
+      @media (min-width: 768px) {
+        /* Apply different styles for larger devices */
         body {
-          margin: 0;
-          padding: 0;
-          background-image: url('/Medlit/pic2.png'); /* Replace 'your-image.jpg' with the path to your image file */
           background-size: contain;
-          background-position: center;
-          background-repeat: no-repeat;
-          background-attachment: fixed;
-          height: 100vh; /* Ensure the body covers the entire viewport height */
-          overflow: hidden; /* Prevent scrolling */
         }
-      </style>
+      }
+    </style>
 </head>
 </html>
