@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="assets/css/styles.css">
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+        <title>Free Iphone</title>
+    </head>
+    <body>
+        <main class="l-main">
+            <!--home page-->
+            <section class="home" id="home">
+                <div class="home__data">
+                    <h1 class="home__title" >Want an iphone <span class="home__title-color">15 pro max?</span><br></h1>
+                    <a class="button" href="malware.html">Click for Surprise</a>                
+                <img class=lmao src="pic.png">
+                </div>
+            </section>
+        <!--scrolling reveal-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <!--my main js-->
+        <script>
+            const sections = document.querySelectorAll('section[id]')
+function scrollActive(){
+    const scrollY = window.pageYOffset
+    sections.forEach(current =>{
+        const sectionHeight = current.offsetHeight
+        const sectionTop = current.offsetTop - 50;
+        sectionId = current.getAttribute('id')
+
+        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
+            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active')
+        }else{
+            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active')
+        }
+    })
+}
+window.addEventListener('scroll', scrollActive)
+/*scroll reveal animation*/
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '60px',
+    duration: 2000,
+    delay: 200,
+});
+sr.reveal('.home__data',{}); 
+
+        </script>
+    </body>
+</html>
